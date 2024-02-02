@@ -1,13 +1,17 @@
 name: workflow
-run-name: ${{ github.actor }} is running
+run-name: ${{ github.actor }} pushed
 on: [push]
 jobs:
   pypi-publish:
-    name: upload release to PyPI
-    runs-on: linux
-    environment: release
+    name: Upload release to PyPI
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/MoriaGeometry
     permissions:
-      id-token: write
+      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
-      - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
+    # retrieve your distributions here
+
+    - name: Publish package distributions to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
