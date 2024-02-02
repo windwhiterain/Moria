@@ -5,7 +5,8 @@ description = "Procedual Geometry Creation"
 authors = [
     {name = "whiting", email = "1712428442@qq.com"},
 ]
-dependencies = []
+dependencies = [
+]
 requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
